@@ -1,0 +1,30 @@
+/* form login dan register */
+.wrapper {
+  height: 100vh;
+}
+
+.login,
+.register {
+  width: 60vh;
+  height: min-content;
+  border-radius: 5px;
+  color: black;
+  padding: 20px;
+  background-color: rgb(183, 201, 216);
+}
+
+.register {
+  background-color: whitesmoke;
+}
+
+.bg-custom {
+  background-color: #779b58;
+}
+
+.bg-custom2 {
+  background-color: #f3f4f6;
+}
+
+.height {
+  height: 100vh;
+}
