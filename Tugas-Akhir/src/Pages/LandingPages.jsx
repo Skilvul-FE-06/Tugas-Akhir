@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroBannerSlider from "../components/HeroBannerSlider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 function LandingPages() {
+  const [showText, setShowText] = useState(false);
+  const [showWasteManagement, setShowWasteManagement] = useState(false);
+  const [showRenewableEnergy, setShowRenewableEnergy] = useState(false);
+
+  const handleToggleText = () => {
+    setShowText(!showText);
+  };
+
+  const handleToggleWasteManagement = () => {
+    setShowWasteManagement(!showWasteManagement);
+  };
+
+  const handleToggleRenewableEnergy = () => {
+    setShowRenewableEnergy(!showRenewableEnergy);
+  };
+
   return (
     <>
-    <div className="App">
-      <HeroBannerSlider />
+      <div className="App">
+        <HeroBannerSlider />
 
-      {/* Tentang Kami */}
-      <div className="body-tentangkami">
+        {/* Tentang Kami */}
+        <div className="body-tentangkami">
         <div className="container py-5">
           <div className="row py-5 align-items-center">
             <div className="col-lg-7">
@@ -40,8 +56,8 @@ function LandingPages() {
         </div>
       </div>
 
-      {/* Kategori */}
-      <div className="container">
+        {/* Kategori */}
+        <div className="container">
         <h1 className="text-center my-5">Kategori</h1>
         <div className="row">
 
@@ -101,77 +117,167 @@ function LandingPages() {
         </div>
       </div>
 
-      {/* Fokus Project */}
-      <section className="container-fluid mt-5  fp">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-sm-12 txtfp1">
-              <h1 className="fw-bold text">
-                Fokus, Project
-                <br />
-                Campaign
-              </h1>
-            </div>
-            <div className="col-md-6 col-sm-12 txtfp2">
-              <p className="fw-medium fs-4 txt">
-                Kami adalah generasi penerus, dengan aksi go green, kami hadir
-                untuk menjaga bumi agar tetap lestari. Setiap langkah kecil,
-                menuju go green, adalah kontribusi besar bagi bumi yang kita
-                cintai.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="row fokus">
-            <div className="col-sm-4 text-center mb-3">
-              <div className="card h-100">
-                <div className="card-body bg-warna1 py-3 ffg1">
-                  <img
-                    src="https://i.ibb.co/p1GnZgQ/recycle.png"
-                    className="mb-3"
-                    width="73px"
-                    height="73px"
-                    alt=""
-                  />
-                  <h3>Pengelola limbah</h3>
-                </div>
+        {/* Fokus Project */}
+        <section className="container-fluid mt-5  fp">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 col-sm-12 txtfp1">
+                <h1 className="fw-bold text">
+                  Fokus, Project
+                  <br />
+                  Campaign
+                </h1>
               </div>
-            </div>
-            <div className="col-sm-4 text-center mb-3">
-              <div className="card h-100">
-                <div className="card-body bg-warna4 py-3 ffg2">
-                  <img
-                    src="https://i.ibb.co/ZXF5xct/energy.png "
-                    className="mb-3"
-                    width="70px"
-                    height="70px"
-                    alt=""
-                  />
-                  <h3>Energi Terbarukan</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-4 text-center mb-3">
-              <div className="card h-100">
-                <div className="card-body bg-warna3 py-3 ffg3">
-                  <img
-                    src="https://i.ibb.co/6B7tByN/education.png "
-                    className="mb-3"
-                    width="70px"
-                    height="70px"
-                    alt=""
-                  />
-                  <h3>Pendidikan Lingkungan</h3>
-                </div>
+              <div className="col-md-6 col-sm-12 txtfp2">
+                <p className="fw-medium fs-4 txt">
+                  Kami adalah generasi penerus, dengan aksi go green, kami hadir
+                  untuk menjaga bumi agar tetap lestari. Setiap langkah kecil,
+                  menuju go green, adalah kontribusi besar bagi bumi yang kita
+                  cintai.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          <div className="container">
+            <div className="row fokus">
+              <div className="col-sm-4 text-center mb-3">
+                <div className="card h-100" onClick={handleToggleWasteManagement}>
+                  <div className="card-body bg-warna1 py-3 ffg1">
+                    <img
+                      src="https://i.ibb.co/p1GnZgQ/recycle.png"
+                      className="mb-3"
+                      width="73px"
+                      height="73px"
+                      alt=""
+                    />
+                    <h3>Pengelola limbah</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-4 text-center mb-3">
+                <div className="card h-100" onClick={handleToggleRenewableEnergy}>
+                  <div className="card-body bg-warna4 py-3 ffg2">
+                    <img
+                      src="https://i.ibb.co/ZXF5xct/energy.png "
+                      className="mb-3"
+                      width="70px"
+                      height="70px"
+                      alt=""
+                    />
+                    <h3>Energi Terbarukan</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-4 text-center mb-3">
+                <div className="card h-100" onClick={handleToggleText}>
+                  <div className="card-body bg-warna3 py-3 ffg3">
+                    <img
+                      src="https://i.ibb.co/6B7tByN/education.png "
+                      className="mb-3"
+                      width="70px"
+                      height="70px"
+                      alt=""
+                    />
+                    <h3>Edukasi & sosialisasi</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {showWasteManagement && (
+            <section className="container-fluid mt-4 mb-4">
+            <div className="container">
+              <div className="row">
+                <div className="col">
+                  <div className="card dc1">
+                    <div className="card-body">
+                      <div className="row">
+                        <div className="col-md-6">
+                          <img
+                            src="https://i.ibb.co/v3gDWrZ/Whats-App-Image-2023-06-14-at-16-45-52.jpg"
+                            alt="Gambar"
+                            className="img-fluid"
+                            style={{width:'150px',height:'150px'}}
+                          />
+                        </div>
+                        <div className="col-md-6">
+                          <h4 className="mb-3">Pengolahan limbah</h4>
+                          <p className="mt-3">Projek ini bertujuan untuk mengurangi jumlah limbah yang dihasilkan dan 
+                          memastikan bahwa limbah yang dihasilkan diolah dengan benar, sehingga tidak 
+                          mencemari lingkungan.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          )}
+          {showRenewableEnergy && (
+            <section className="container-fluid mt-4 mb-4">
+              <div className="container ">
+                <div className="row">
+                  <div className="col">
+                    <div className="card dc2">
+                      <div className="card-body">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <img
+                              src="https://i.ibb.co/T1prhKG/Whats-App-Image-2023-06-14-at-16-45-15.jpg"
+                              alt="Gambar"
+                              className="img-fluid"
+                              style={{width:'150px',height:'150px'}}
+                            />
+                          </div>
+                          <div className="col-md-6">
+                            <h4 className="mb-3">Energi terbarukan</h4>
+                            <p className="mt-3">Projek ini bertujuan untuk meningkatkan penggunaan sumber energi terbarukan 
+                            seperti tenaga surya, tenaga angin, dan hidroelektrik, yang lebih ramah lingkungan 
+                            daripada sumber energi fosil..</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+          {showText && (
+            <section className="container-fluid mt-4 mb-4">
+              <div className="container">
+                <div className="row">
+                  <div className="col">
+                    <div className="card dc3">
+                      <div className="card-body">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <img
+                              src="https://i.ibb.co/0K70X0C/Whats-App-Image-2023-06-14-at-16-44-19.jpg"
+                              alt="Gambar"
+                              className="img-fluid"
+                              style={{width:'150px',height:'150px'}}
+                            />
+                          </div>
+                          <div className="col-md-6">
+                            <h4 className="mb-3">Edukasi & sosialisasi</h4>
+                            <p className="mt-3">Projek ini bertujuan untuk meningkatkan kesadaran masyarakat tentang pentingnya 
+                            menjaga lingkungan dan cara-cara yang dapat dilakukan untuk melakukannya.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </section>
 
-      {/* Fun Fact */}
-      <section className="container-fluid project">
+        {/* Fun Fact */}
+        <section className="container-fluid project">
         <div className="container">
           <div className="row">
             <div className="col-sm-6 rounded-4 textff">
@@ -183,6 +289,7 @@ function LandingPages() {
                   width="80px"
                   height="80px"
                   alt=""
+                  
                 />
                 Guys!!
               </h1>
@@ -205,9 +312,8 @@ function LandingPages() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
     </>
-    
   );
 }
 
