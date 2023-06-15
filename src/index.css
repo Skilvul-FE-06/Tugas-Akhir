@@ -126,3 +126,22 @@
 .dc3{
   background-color: #F47F5A;
 }
+
+.text {
+  text-align: justify;
+}
+
+.color1 {
+  color: #0b6d9a;
+  font-size: 6vh;
+}
+
+.color2 {
+  color: #ffc400;
+  font-size: 6vh;
+}
+
+.color3 {
+  color: #4cadff;
+  font-size: 6vh;
+}

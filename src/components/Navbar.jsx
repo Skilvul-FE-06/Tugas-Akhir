@@ -28,7 +28,7 @@ function NavComponent() {
     const navLinks = [
       { to: "/", text: "Beranda" },
       { to: "/kategori", text: "Kategori" },
-      { to: "/artikel", text: "Artikel" },
+      { to: "/articles", text: "Artikel" },
     ];
 
     if (isLoggedIn && currentUser?.role === "admin") {

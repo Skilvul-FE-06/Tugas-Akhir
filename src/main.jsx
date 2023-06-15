@@ -14,7 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthProvider>
       <ComplaintProvider>
         <Provider>
+        <ArticleProvider>
         <App />
+        </ArticleProvider>
         </Provider>
       </ComplaintProvider>
     </AuthProvider>

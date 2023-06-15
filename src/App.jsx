@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import NavComponent from "./components/Navbar";
 import { AuthContext } from "./context/AuthContext";
-import Artikel from "./pages/ArticlePage";
+import ArticlePage from "./pages/ArticlePage";
 import DataPengaduan from "./pages/DataPengaduan";
 import Home from "./pages/Home";
 import Kategori from "./pages/Kategori";
@@ -34,7 +34,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginUser />} />
         <Route path="/kategori/" element={<Kategori />} />
-        <Route path="/artikel" element={<ArticlePage />} />
+        <Route path="/articles" element={<ArticlePage />} />
+        <Route path="/articles/:id" element={<ArticleDetail />} />
         <Route path="/pengaduan" element={isLoggedIn && currentUser.role === "user" ? <Pengaduan /> : <Navigate replace to={"/login"} state={{ navigateTo: "/pengaduan" }} />} />
         <Route path="/data-pengaduan" element={isLoggedIn && currentUser.role === "admin" ? <DataPengaduan /> : <Navigate replace to={"/login"} />} />
       </Routes>
