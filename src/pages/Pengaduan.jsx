@@ -1,12 +1,12 @@
-import { useContext } from "react";
 import { Container } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import FormKeluhan from "../components/FormKeluhan";
 
 function Pengaduan() {
+
+  
   return (
     <>
-      <Container>
+      <Container className="my-3">
         <FormKeluhan />
       </Container>
     </>

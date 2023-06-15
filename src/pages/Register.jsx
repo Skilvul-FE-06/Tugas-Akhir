@@ -29,7 +29,7 @@ function Register() {
 
   return (
     <>
-      <Container fluid className="d-flex flex-column align-items-center justify-content-center height bg-custom2">
+      <Container fluid className="d-flex flex-column align-items-center justify-content-center height bg-custom3">
         <div className="d-flex align-items-center justify-content-center gap-2 mb-4">
           <img src="https://i.ibb.co/gwHhDPb/11zon-cropped-1.png" className="shadow rounded-circle" width={70} />
           <h2 className="mb-3 text-center fw-bold" style={{ textShadow: "2px 2px 2px rgba(0, 0, 0, 0.3)" }}>

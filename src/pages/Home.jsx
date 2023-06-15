@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 function Home() {
@@ -6,11 +6,13 @@ function Home() {
   const [showText2, setShowText2] = useState(false);
 
   const handleShow = () => {
-    setShowText(!showText);
+    setShowText((prevShowText) => !prevShowText);
+    setShowText2(false);
   };
 
   const handleShow2 = () => {
-    setShowText2(!showText2);
+    setShowText(false);
+    setShowText2((prevShowText2) => !prevShowText2);
   };
 
   return (

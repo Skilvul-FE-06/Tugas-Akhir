@@ -1,80 +1,77 @@
-function Footbar() {
+import { useContext } from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { BsTwitter, BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
+
+const Footbar = () => {
+  const { isLoggedIn, currentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLinkClick = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener noreferrer");
+    if (newWindow) {
+      newWindow.opener = null;
+    } else {
+      navigate(url);
+    }
+  };
+
   return (
-    <>
-      <footer className="text-center text-lg-start bg-warna text-muted pt-3">
-        <section className="">
-          <div className="container text-center text-md-start mt-5">
-            <div className="row mt-3">
-              <div className="col-xl-3 col-sm-12 mb-4 text-dark">
-                <h1 className="fw-bold mb-4">TRACLE.</h1>
-                <img src="assets/Logo/11zon_cropped.png" width="150px" height="150px" alt="" className="ms-2" />
-              </div>
+    <footer style={{ backgroundColor: "#9cc976" }} className="page-footer font-small pt-1 text-light">
+      <Container fluid className="p-3">
+        <Row>
+          <Col md={5} className="mt-md-0 p-3 d-flex flex-column align-items-center text-dark ">
+            <h1>TRACLE.</h1>
+            <Image fluid src="https://i.ibb.co/gwHhDPb/11zon-cropped-1.png" width={150} />
+          </Col>
 
-              <div className="garis-vertikal" id="garis1"></div>
+          <Col md={3} className="mb-md-0 mb-3  p-3">
+            <h3 className="text-uppercase text-center text-dark fs-2 fw-medium">fitur</h3>
+            <ul className="mt-4">
+              <li className="mt-2 ">
+                <Link className="text-decoration-none text-dark fw-medium fs-4" to="/artikel">
+                  Artikel
+                </Link>
+              </li>
+              <li className="mt-2 ">
+                <Link className="text-decoration-none text-dark fw-medium fs-4" to="/kategori">
+                  Kategori
+                </Link>
+              </li>
+              <li className="mt-2 ">
+                <Link className="text-decoration-none text-dark fw-medium fs-4" to="/pengaduan">
+                  Pengaduan
+                </Link>
+              </li>
+            </ul>
+          </Col>
 
-              <div className="col-xl-5 col-sm-12 mb-4 text-dark">
-                <h3 className="text-center text-light fw-bold mb-4">Tentang Kami</h3>
-                <div className="row fs-5 fw-bold">
-                  <div className="col-md-8">
-                    <ul>
-                      <li className="mb-3 text-start">
-                        <a href="" className="text-decoration-none text-light">
-                          Tentang
-                        </a>
-                      </li>
-                      <li className="mb-3 text-start">
-                        <a href="" className="text-decoration-none text-light">
-                          Kontak Kami
-                        </a>
-                      </li>
-                      <li className="text-start">
-                        <a href="" className="text-decoration-none text-light">
-                          Privasi & Kebijakan
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-md-4">
-                    <ul>
-                      <li className="text-start">
-                        <a href="" className="text-decoration-none text-light">
-                          Forum
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="garis-vertikal" id="garis2"></div>
-
-              <div className="col-xl-3 col-sm-12 mb-md-0 mb-3 text-dark">
-                <h3 className="text-center text-light fw-bold mb-5">Ikuti Kami</h3>
-                <div className="row m-auto">
-                  <div className="col-md-3 mt-3">
-                    <a href="">{/* <i className="fa-brands fa-twitter fa-2x" style="color: #000000"></i> */}</a>
-                  </div>
-                  <div className="col-md-3 mt-3">
-                    <a href="">{/* <i className="fa-brands fa-facebook fa-2x" style="color: #000000"></i> */}</a>
-                  </div>
-                  <div className="col-md-3 mt-3">
-                    <a href="">{/* <i className="fa-brands fa-instagram fa-2x" style="color: #000000"></i> */}</a>
-                  </div>
-                  <div className="col-md-3 mt-3">
-                    <a href="">{/* <i className="fa-brands fa-youtube fa-2x" style="color: #000000"></i> */}</a>
-                  </div>
-                </div>
-              </div>
+          <Col md={4} className="mb-md-0 mb-3 p-3">
+            <h3 className="text-uppercase fs-2 fw-medium text-dark text-center">ikuti kami</h3>
+            <div className="mt-5  d-flex justify-content-center align-items-center gap-5 p-3">
+              <Link onClick={() => handleLinkClick("https://twitter.com/skilvul")}>
+                <BsTwitter size={40} color="black" />
+              </Link>
+              <Link onClick={() => handleLinkClick("https://www.facebook.com/skilvul")}>
+                <BsFacebook size={40} color="black" />
+              </Link>
+              <Link onClick={() => handleLinkClick("https://www.instagram.com/skilvul/")}>
+                <BsInstagram size={40} color="black" />
+              </Link>
+              <Link onClick={() => handleLinkClick("https://www.youtube.com/skilvul")}>
+                <BsYoutube size={40} color="black" />
+              </Link>
             </div>
-          </div>
+          </Col>
+        </Row>
+      </Container>
 
-          <div className="text-center p-3 bg-warna2">
-            <h6 className="text-light fw-bold">Copyright © 2023. Tracle</h6>
-          </div>
-        </section>
-      </footer>
-    </>
+      <div className="footer text-center py-3 bg-custom fw-semibold">
+        <span>Copyright © 2023. Tracle</span>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footbar;

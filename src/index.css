@@ -10,11 +10,15 @@
   border-radius: 5px;
   color: black;
   padding: 20px;
-  background-color: rgb(183, 201, 216);
+  background-color: white;
 }
 
-.register {
-  background-color: whitesmoke;
+.pengaduan {
+  width: 60vh;
+  height: min-content;
+  border-radius: 5px;
+  color: black;
+  padding: 20px;
 }
 
 .bg-custom {
@@ -25,6 +29,15 @@
   background-color: #f3f4f6;
 }
 
+.bg-custom3 {
+  background: linear-gradient(287.21deg, #5da61d 0%, #779b58 69.17%);
+}
+
+.bg-custom4 {
+  background-color: #088395;
+}
+
 .height {
   height: 100vh;
+  width: 100%;
 }

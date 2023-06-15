@@ -8,8 +8,9 @@ function DataPengaduan() {
   const cities = Array.from(new Set(data.map((item) => item.kota)));
 
   return (
-    <Container className="mt-3">
-      <Row>
+    <Container fluid className="my-3 height">
+      <h1 className="mb-5 text-center">Data Pengaduan</h1>
+      <Row className="mx-5">
         {cities.map((city) => (
           <Col key={city} xs={12} md={4} lg={3}>
             <Cards city={city} data={data} />

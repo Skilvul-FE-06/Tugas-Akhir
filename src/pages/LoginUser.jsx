@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
 function FormLogin() {
@@ -9,6 +9,8 @@ function FormLogin() {
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const navigateTo = location.state?.navigateTo ?? "/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,18 +18,18 @@ function FormLogin() {
     const successLogin = await login(email, password);
     if (successLogin) {
       alert("Login berhasil");
-      navigate("/");
+      navigate(navigateTo);
     } else {
       alert("Email atau password anda salah");
     }
   };
 
   return (
-    <Container fluid className="d-flex align-items-center justify-content-center bg-custom height">
-      <div className="login rounded shadow-lg p-4">
+    <Container fluid className="d-flex align-items-center justify-content-center bg-custom3 height">
+      <div className="login border border-black rounded shadow-lg p-4">
         <Form onSubmit={handleSubmit}>
           <h2 className="mb-3 text-center fw-bold">
-            <img src="https://i.ibb.co/gwHhDPb/11zon-cropped-1.png" width={50} /> L O G I N
+            <img src="https://i.ibb.co/gwHhDPb/11zon-cropped-1.png" width={50} className="rounded-circle shadow" /> L O G I N
           </h2>
           <Form.Group className="mb-2" controlId="email">
             <Form.Label>Email</Form.Label>

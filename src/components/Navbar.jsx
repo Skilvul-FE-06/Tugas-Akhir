@@ -21,7 +21,7 @@ function NavComponent() {
   };
 
   const handleNavLinkClick = (to) => {
-    setActiveLink(to === activeLink ? "" : to);
+    setActiveLink(to);
   };
 
   const renderNavLinks = () => {

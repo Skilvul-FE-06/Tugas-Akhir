@@ -46,6 +46,7 @@ export const AuthProvider = ({ children }) => {
         return false;
       }
 
+      // Harus sama dengan yang ada di mockapi bentuknya
       const newUser = {
         email,
         password,
