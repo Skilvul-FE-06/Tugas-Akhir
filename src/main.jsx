@@ -10,6 +10,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ArticleProvider>
       <App />
     </ArticleProvider>
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 );
