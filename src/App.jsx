@@ -10,7 +10,6 @@ import LoginUser from "./pages/LoginUser";
 import Pengaduan from "./pages/Pengaduan";
 import Register from "./pages/Register";
 import Footbar from "./components/Footbar";
-import Coba from "./pages/CobaLogin";
 import "./index.css";
 import Organik from "./pages/Organik";
 import Anorganik from "./pages/Anorganik";
@@ -30,7 +29,6 @@ function App() {
         <Route path="/kategori/anorganik" element={<Anorganik/>} />
         <Route path="/kategori/b3" element={<B3/>} />
         <Route path="/" element={<Home />} />
-        <Route path="/coba" element={<Coba />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginUser />} />
         <Route path="/kategori/" element={<Kategori />} />
