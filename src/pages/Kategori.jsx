@@ -7,9 +7,9 @@ import HeroBannerSlider from '../components/HeroBannerSlider';
 function Kategori() {
 
   const[kat, setKat] = useState([
-    {id:1, ktg:"Organik", image: "src/assets/kategori/organik.png", link: "/kategori/organik"},
-    {id:2, ktg:"Anorganik", image: "src/assets/kategori/anorganik.png", link: "/kategori/anorganik"},
-    {id:3, ktg:"B3", image: "src/assets/kategori/b3.png", link: "/kategori/b3"}
+    {id:1, ktg:"Organik", image: "..src/assets/kategori/organik.png", link: "/kategori/organik"},
+    {id:2, ktg:"Anorganik", image: "..src/assets/kategori/anorganik.png", link: "/kategori/anorganik"},
+    {id:3, ktg:"B3", image: "..src/assets/kategori/b3.png", link: "/kategori/b3"}
   ])
 
   return (
