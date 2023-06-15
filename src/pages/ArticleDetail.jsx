@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArticleContext } from '../context/ArticlesContext';
 import { FaArrowLeft } from 'react-icons/fa';
 
-const ArticlePage = () => {
+const ArticleDetail = () => {
     const { id } = useParams();
     const articles = useContext(ArticleContext);
     const article = articles.find((article) => article.id === id);
@@ -29,4 +29,4 @@ const ArticlePage = () => {
     );
 };
 
-export default ArticlePage; 
+export default ArticleDetail; 
