@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import NavComponent from "./components/Navbar";
 import { AuthContext } from "./context/AuthContext";
-import ArticlePage from "./pages/ArticlePage";
+import ArticleDetail from "./pages/ArticleDetail";
 import DataPengaduan from "./pages/DataPengaduan";
 import Home from "./pages/Home";
 import Kategori from "./pages/Kategori";
