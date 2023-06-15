@@ -1,11 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Slidebanner from "../components/Slidebanner";
-import React from 'react';
-import '../style/kategori.css'
 import { Helmet } from "react-helmet";
 import { Col, Container, Row } from "react-bootstrap";
 import { useState } from "react";
 import Card1 from "../components/Card1";
+import HeroBannerSlider from '../components/HeroBannerSlider';
 
 function Kategori() {
 
@@ -18,7 +15,7 @@ function Kategori() {
   return (
     <>
       <Helmet><title>Kategori | TRACLE</title></Helmet>
-      <Slidebanner/>
+      <HeroBannerSlider/>
 
       {/* Kategori */}
       <Container fluid>

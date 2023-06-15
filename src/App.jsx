@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import NavComponent from "./components/Navbar";
 import { AuthContext } from "./context/AuthContext";
-import Artikel from "./pages/Artikel";
+import Artikel from "./pages/ArticlePage";
 import DataPengaduan from "./pages/DataPengaduan";
 import Home from "./pages/Home";
 import Kategori from "./pages/Kategori";
@@ -12,6 +12,10 @@ import Register from "./pages/Register";
 import Footbar from "./components/Footbar";
 import Coba from "./pages/CobaLogin";
 import "./index.css";
+import Organik from "./pages/Organik";
+import Anorganik from "./pages/Anorganik";
+import B3 from "./pages/B3";
+import ArticlePage from "./pages/ArticlePage";
 
 function App() {
   const location = useLocation();
@@ -22,12 +26,15 @@ function App() {
     <>
       {show && <NavComponent />}
       <Routes>
+        <Route path="/kategori/organik" element={<Organik/>} />
+        <Route path="/kategori/anorganik" element={<Anorganik/>} />
+        <Route path="/kategori/b3" element={<B3/>} />
         <Route path="/" element={<Home />} />
         <Route path="/coba" element={<Coba />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<LoginUser />} />
-        <Route path="/kategori" element={<Kategori />} />
-        <Route path="/artikel" element={<Artikel />} />
+        <Route path="/kategori/" element={<Kategori />} />
+        <Route path="/artikel" element={<ArticlePage />} />
         <Route path="/pengaduan" element={isLoggedIn && currentUser.role === "user" ? <Pengaduan /> : <Navigate replace to={"/login"} state={{ navigateTo: "/pengaduan" }} />} />
         <Route path="/data-pengaduan" element={isLoggedIn && currentUser.role === "admin" ? <DataPengaduan /> : <Navigate replace to={"/login"} />} />
       </Routes>

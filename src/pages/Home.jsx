@@ -64,12 +64,12 @@ function Home() {
 
         {/* Kategori */}
         <div className="container">
-        <h1 className="text-center my-5">Kategori</h1>
+        <h1 className="text-center my-5">KATEGORI</h1>
         <div className="row">
 
           {/* Card 1 */}
           <div className="col-md-4 mb-4">
-            <Link to="" className="text-decoration-none">
+            <Link to="/kategori/organik" className="text-decoration-none">
               <div className="card rounded-2">
                 <img
                   className="card-img-top"
@@ -87,7 +87,7 @@ function Home() {
 
           {/* Card 2 */}
           <div className="col-md-4 mb-4">
-            <Link to="" className="text-decoration-none">
+            <Link to="/kategori/anorganik" className="text-decoration-none">
               <div className="card rounded-2">
                 <img
                   className="card-img-top"
@@ -105,7 +105,7 @@ function Home() {
 
           {/* Card 3 */}
           <div className="col-md-4 mb-4">
-            <Link to="" className="text-decoration-none">
+            <Link to="/kategori/b3" className="text-decoration-none">
               <div className="card rounded-2">
                 <img
                   className="card-img-top"
