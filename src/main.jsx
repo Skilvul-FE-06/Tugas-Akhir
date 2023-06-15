@@ -1,13 +1,15 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import { ArticleProvider } from './context/ArticlesContext';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Routes>
-      <Route path="*" element={<App />} />
-    </Routes>
-  </BrowserRouter>
+    <ArticleProvider>
+      <App />
+    </ArticleProvider>
+  </BrowserRouter>,
+  document.getElementById('root')
 );

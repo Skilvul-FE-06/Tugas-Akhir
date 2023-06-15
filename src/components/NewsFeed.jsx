@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ArticleContext } from '../context/ArticlesContext';
 import ArticleCard from './ArticleCard';
 
-const ArticleList = () => {
+const NewsFeed = () => {
     const articles = useContext(ArticleContext);
 
     return (
@@ -27,4 +27,4 @@ const ArticleList = () => {
     );
 };
 
-export default ArticleList;
+export default NewsFeed;

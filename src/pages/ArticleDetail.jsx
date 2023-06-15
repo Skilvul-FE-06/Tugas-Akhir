@@ -21,7 +21,7 @@ const ArticlePage = () => {
             {article.content.split('\n').map((paragraph, index) => (
                 <p className="mb-3" key={index}>{paragraph}</p>
             ))}
-            <Link to="*" className="btn btn-success">
+            <Link to="/articles" className="btn btn-success">
                 <FaArrowLeft className="me-2" />
                 Baca Artikel Lain
             </Link>
