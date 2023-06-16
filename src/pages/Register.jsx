@@ -53,7 +53,7 @@ function Register() {
               <Form.Control type="password" placeholder="Masukkan Kofirmasi Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
             </Form.Group>
             <Button className="btn-primary mt-2 w-100" type="submit">
-              Login
+              Register
             </Button>
             <span className="d-block mt-2 text-center">
               Sudah punya akun? <span></span>
