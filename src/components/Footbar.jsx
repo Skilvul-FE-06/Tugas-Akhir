@@ -30,7 +30,7 @@ const Footbar = () => {
             <h3 className="text-uppercase text-center text-dark fs-2 fw-medium">fitur</h3>
             <ul className="mt-4">
               <li className="mt-2 ">
-                <Link className="text-decoration-none text-dark fw-medium fs-4" to="/artikel">
+                <Link className="text-decoration-none text-dark fw-medium fs-4" to="/articles">
                   Artikel
                 </Link>
               </li>
