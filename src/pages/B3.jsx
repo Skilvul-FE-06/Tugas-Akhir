@@ -7,18 +7,18 @@ import Card2 from '../components/Card2';
 function B3(){
 
   const[banner, setBanner] = useState({
-    gambar: "../src/assets/b3/b3.png", 
+    gambar: "https://i.ibb.co/vYm9NKs/radioaktif.png", 
     judul: "Sampah B3 (Bahan Berbahaya dan Beracun", 
     deskripsi: "Bahan Berbahaya dan Beracun atau sering disingkat dengan B3 adalah zat, energi, dan/atau komponen lain yang karena sifat, konsentrasi dan/atau jumlahnya baik secara langsung maupun tidak langsung dapat mencemarkan dan/atau merusak lingkungan hidup, membahayakan lingkungan hidup, kesehatan serta kelangsungan hidup manusia dan makhluk hidup lain.",
   })
 
   const[b3, setB3] = useState([
-    {id:1, name:"Baterai", img: "../src/assets/b3/baterai.png"},
-    {id:2, name:"Sampah Elektronik", img: "../src/assets/b3/elektronik.png"},
-    {id:3, name:"Sampah Kosmetik", img: "../src/assets/b3/kosmetik.png"},
-    {id:4, name:"Lampu", img: "../src/assets/b3/lampu.png"},
-    {id:5, name:"Sampah Medis", img: "../src/assets/b3/medis.png"},
-    {id:6, name:"Obat Kadaluarsa", img: "../src/assets/b3/obat.png"}
+    {id:1, name:"Baterai", img: "https://i.ibb.co/bJVh0RK/alur.jpg"},
+    {id:2, name:"Sampah Elektronik", img: "https://i.ibb.co/FBJ3wQP/elektronik.png"},
+    {id:3, name:"Sampah Kosmetik", img: "https://i.ibb.co/hLLyGNk/kosmetik.png"},
+    {id:4, name:"Lampu", img: "https://i.ibb.co/zX93Lq5/lampu.png"},
+    {id:5, name:"Sampah Medis", img: "https://i.ibb.co/nLGNs1N/medis.png"},
+    {id:6, name:"Obat Kadaluarsa", img: "https://i.ibb.co/6vYPr3h/obat.png"}
   ])
   
   return(
@@ -55,7 +55,7 @@ function B3(){
                   Jika tercampur, maka sampah/limbah domestik yang telah terkontaminasi B3 harus dikategorikan sebagai limbah B3.
                   Setelah dipilah, limbah B3 akan ditempatkan di TPS (tempat penyimpanan sementara) limbah B3 milik penghasil limbah. TPS ini wajib memenuhi persyaratan teknis dan mendapatkan persetujuan lingkungan.</p>
               <Container className="text-center">
-                <img src="../src/assets/b3/alur.jpg" alt="" className="img-fluid rounded-3 mt-3" width="1000px" height="950px"/>
+                <img src="https://i.ibb.co/bJVh0RK/alur.jpg" alt="" className="img-fluid rounded-3 mt-3" width="1000px" height="950px"/>
               </Container>
             </div>
           <div className='p-4'></div>

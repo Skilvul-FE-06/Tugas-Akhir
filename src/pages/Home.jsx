@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeroBannerSlider from "../components/HeroBannerSlider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 function Home() {
     const [showWasteManagement, setShowWasteManagement] = useState(false);
@@ -28,6 +29,7 @@ function Home() {
 
   return (
     <>
+      <Helmet><title>Beranda | TRACLE</title></Helmet>
       <div className="App">
         <HeroBannerSlider />
 
