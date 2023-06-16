@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { Helmet } from 'react-helmet';
 
 function FormLogin() {
   const [email, setEmail] = useState("");
@@ -25,7 +26,9 @@ function FormLogin() {
   };
 
   return (
-    <Container fluid className="d-flex align-items-center justify-content-center bg-custom3 height">
+    <>
+      <Helmet><title>Login | TRACLE</title></Helmet>
+      <Container fluid className="d-flex align-items-center justify-content-center bg-custom3 height">
       <div className="login border border-black rounded shadow-lg p-4">
         <Form onSubmit={handleSubmit}>
           <h2 className="mb-3 text-center fw-bold">
@@ -51,6 +54,7 @@ function FormLogin() {
         </Form>
       </div>
     </Container>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ComplaintContext } from "../context/ComplaintContext";
 import Cards from "../components/Cards";
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 
 function DataPengaduan() {
   const { data, addData } = useContext(ComplaintContext);
@@ -13,7 +14,9 @@ function DataPengaduan() {
   }, []);
 
   return (
-    <Container fluid className="my-3 height">
+    <>
+      <Helmet><title>Data Pengaduan | TRACLE</title></Helmet>
+      <Container fluid className="my-3 height">
       <h1 className="mb-5 text-center">Data Pengaduan</h1>
       <Row className="mx-5">
         {cities.map((city) => (
@@ -23,6 +26,7 @@ function DataPengaduan() {
         ))}
       </Row>
     </Container>
+    </>
   );
 }
 
