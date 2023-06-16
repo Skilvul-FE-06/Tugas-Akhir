@@ -30,7 +30,7 @@ function Organik(){
   const[daurulg, setDaurulg] = useState([
     {eventKey: 0, header: "Daur Ulang Sampah Cangkang Telur", judul: "Membuat Kerajinan dari Cangkang Telur", imgex: "https://i.ibb.co/R03vfRg/Kerajinan-Telur.png", 
       desc: "Cara membuatnya juga sangatlah mudah, yang pertama pilihlah terlebih dahulu kulit telur yang masih bagus. Selanjutnya, bersihkan kulit telur dari kotoran, kemudian keringkan. Berilah warna sesuai dengan karakter yang kalian inginkan, jangan lupakan bentuk mata dan juga hidung agar tampak lebih cantik, dan boneka dari kulit telur sudah siap untuk dijadikan hiasan."},
-    {eventKey: 1, header: "Daur Ulang Sampah Organik", judul: "Membuat Kompos Dari Sampah Organik", imgex: "../src/assets/organik/org.jpg",
+    {eventKey: 1, header: "Daur Ulang Sampah Organik", judul: "Membuat Kompos Dari Sampah Organik", imgex: "https://i.ibb.co/4gdfktF/org.jpg",
       desc: "Sampah organik yang anda sisihkan tadi kemudian potong kecil-kecil. Kemudian campur bahan tersebut dengan sepertiga serbuk gergaji atau pupuk kandang. Jika anda menggunakan pupuk kandang seperti kotoran kambing maka buat komposisi 3 : 1. Jangan lupa untuk menambahkan ragi kompos atau Tricholant lalu tutup dengan karung atau plastic. Diamkan sampah hingga 7 hari lamanya sampai membusuk. Setiap hari luangkan waktu Anda untuk mengaduk sampah ini dan atur suhu kompos berkisar 30 – 70 derajat celcius. Jika anda kesulitan dalam mengaduknya taka da salahnya jika ditambahkan air. Kompos yang sudah jadi akan berwarna kecokelatan seperti tanah dan tidak berbau busuk lagi."}
   ])
 
