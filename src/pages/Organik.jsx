@@ -16,15 +16,15 @@ function Organik(){
   }) 
 
   const[organik, setOrganik] = useState([
-    {id:1, name:"Buah Busuk", img: "../src/assets/organik/buahbusuk.png"},
-    {id:2, name:"Biji", img: "../src/assets/organik/biji.png"},
-    {id:3, name:"Daun Kering", img: "../src/assets/organik/daun.png"},
-    {id:4, name:"Kotoran Hewan", img: "../src/assets/organik/kotoran.png"},
-    {id:5, name:"Kulit Telur", img: "../src/assets/organik/kulit.png"},
-    {id:6, name:"Ranting Kering", img: "../src/assets/organik/ranting.png"},
-    {id:7, name:"Sayur Busuk", img: "../src/assets/organik/sayurbusuk.png"},
-    {id:8, name:"Serabut Kelapa", img: "../src/assets/organik/serabut.png"},
-    {id:9, name:"Tulang Hewan", img: "../src/assets/organik/tulang.png"}
+    {id:1, name:"Buah Busuk", img: "https://i.ibb.co/Ksqpd5g/buahbusuk.png"},
+    {id:2, name:"Biji", img: "https://i.ibb.co/bFnmhQ9/biji.png"},
+    {id:3, name:"Daun Kering", img: "https://i.ibb.co/3hND64y/daun.png"},
+    {id:4, name:"Kotoran Hewan", img: "https://i.ibb.co/6WY3pV8/kotoran.png"},
+    {id:5, name:"Kulit Telur", img: "https://i.ibb.co/2WxFxHq/kulit.png"},
+    {id:6, name:"Ranting Kering", img: "https://i.ibb.co/zbjmQmL/ranting.png"},
+    {id:7, name:"Sayur Busuk", img: "https://i.ibb.co/Qjfk3RW/sayurbusuk.png"},
+    {id:8, name:"Serabut Kelapa", img: "https://i.ibb.co/dK6j7B0/serabut.png"},
+    {id:9, name:"Tulang Hewan", img: "https://i.ibb.co/YQ2vXFC/tulang.png"}
   ])
 
   const[daurulg, setDaurulg] = useState([
