@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { Helmet } from 'react-helmet';
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -29,6 +30,7 @@ function Register() {
 
   return (
     <>
+      <Helmet><title>Register | TRACLE</title></Helmet>
       <Container fluid className="d-flex flex-column align-items-center justify-content-center height bg-custom3">
         <div className="d-flex align-items-center justify-content-center gap-2 mb-4">
           <img src="https://i.ibb.co/gwHhDPb/11zon-cropped-1.png" className="shadow rounded-circle" width={70} />
