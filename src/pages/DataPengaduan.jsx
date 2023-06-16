@@ -2,10 +2,15 @@ import { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ComplaintContext } from "../context/ComplaintContext";
 import Cards from "../components/Cards";
+import { useEffect } from "react";
 
 function DataPengaduan() {
-  const { data } = useContext(ComplaintContext);
+  const { data, addData } = useContext(ComplaintContext);
   const cities = Array.from(new Set(data.map((item) => item.kota)));
+
+  useEffect(() => {
+    addData();
+  }, []);
 
   return (
     <Container fluid className="my-3 height">

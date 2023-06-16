@@ -7,6 +7,7 @@ export const ComplaintContext = createContext();
 
 export const ComplaintProvider = ({ children }) => {
   const [data, setData] = useState([]);
+  const [updateData, setUpdateData] = useState(false);
 
   const getData = async () => {
     try {
@@ -21,6 +22,7 @@ export const ComplaintProvider = ({ children }) => {
     try {
       await axios.post("https://64400c883dee5b763e2d6c25.mockapi.io/todo", newData);
       alert("Data berhasil dikirim");
+      setUpdateData(true);
     } catch (error) {
       console.error(error);
     }
@@ -28,7 +30,7 @@ export const ComplaintProvider = ({ children }) => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [updateData]);
 
   return (
     <>
