@@ -41,7 +41,7 @@ function Kategori() {
           <h2 className="text-center py-5">FOR YOUR INFORMATION</h2>
           <Row className="align-items-center pb-5">
             <Col className="sm-4">
-              <img src="../assets/kategori/fyi.png" className="rounded-3" width="450px" height="250px"/>
+              <img src="https://i.ibb.co/PG4Pbp5/fyi.png" className="rounded-3" width="450px" height="250px"/>
             </Col>
             <Col className="sm-8">
               <h3><strong>Tahukah <span className="text-success">Kamu?</span></strong></h3>
